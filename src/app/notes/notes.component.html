@@ -1,0 +1,13 @@
+
+
+<header class="header">
+    <h1>Notes</h1>
+    <button class="primary-button" [routerLink]="['/notes/new']" *ngIf="!isAddScreen">
+        Create notes
+    </button>
+    <button class="primary-button" [routerLink]="['/notes/listing']" *ngIf="isAddScreen">
+        Listing
+    </button>
+</header>
+<hr>
+<router-outlet></router-outlet>

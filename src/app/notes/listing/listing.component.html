@@ -1,0 +1,27 @@
+<ul>
+    <ng-container *ngIf="noteListing?.length > 0">
+        <li *ngFor="let item of noteListing">
+            <aside class="content">
+                <span class="title">
+                    {{item?.title}}
+                </span>
+                <p class="desc">
+                    {{item?.description}}
+                </p>
+                <span class="time">
+                    {{item?.createdDate | date: 'medium'}}
+                </span>
+            </aside>
+            <aside class="right">
+                <span (click)="editData(item)">Edit</span>
+                <span (click)="deleteData(item)">Delete</span>
+            </aside>
+        </li>
+    </ng-container>
+    <li *ngIf="noteListing?.length === 0">
+        <span class="no-notes">
+
+            No notes found
+        </span>
+    </li>
+</ul>

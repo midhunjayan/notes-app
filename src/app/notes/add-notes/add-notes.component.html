@@ -1,0 +1,29 @@
+<section class="container">
+    <h2>{{isEditing? 'Update your note': 'Create a new note'}}</h2>
+
+    <form [formGroup]="addForm" class="form-content">
+        <aside class="elem-wrap">
+            <label for="">Title*</label>
+            <input type="text" formControlName="title" />
+            <span class="error" *ngIf="(fControls.title.touched || submitted) && fControls.title.invalid">
+                This field is required!
+            </span>
+        </aside>
+        <aside class="elem-wrap">
+            <label for="">Description*</label>
+            <textarea formControlName="description" cols="30" rows="10"></textarea>
+            <span class="error"
+                *ngIf="(fControls.description.touched || submitted) && fControls.description.invalid">
+                This field is required!
+            </span>
+        </aside>
+        <aside class="button-wrap">
+            <button class="secondary-button" (click)="resetForm()">
+                Cancel
+            </button>
+            <button class="primary-button" (click)="createForm()">
+                {{isEditing?'Update': 'Create'}}
+            </button>
+        </aside>
+    </form>
+</section>

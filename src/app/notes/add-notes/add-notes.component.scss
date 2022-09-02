@@ -1,0 +1,36 @@
+.form-content {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea {
+    margin: 15px 0;
+    padding: 8px 20px;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+  }
+}
+.container {
+  padding: 20px;
+  width: 66vw;
+  box-shadow: 1px 1px 12px 0px #dbecdb;
+  border-radius: 6px;
+}
+.elem-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    margin: 0 12px;
+  }
+}
+.error {
+  color: red;
+  font-size: 14px;
+  transition: all ease-in 0.8s;
+}

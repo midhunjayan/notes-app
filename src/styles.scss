@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #fff;
+}
+
+
+.primary-button {
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.secondary-button {
+  border: 1px solid green;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+}
