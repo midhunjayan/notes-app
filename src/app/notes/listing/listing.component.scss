@@ -2,7 +2,8 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 66vw;
+  height: 90%;
+  overflow: auto;
 
   li {
     display: flex;
@@ -11,6 +12,7 @@ ul {
     padding: 20px 12px;
     box-shadow: 1px 1px 12px 0px #dbecdb;
     margin-top: 10px;
+    background-color: white;
     .content {
       display: flex;
       flex-direction: column;
@@ -51,4 +53,10 @@ ul {
 .no-notes {
     font-size: 18px;
     text-align: center;
+}
+
+.bg-grey {
+  background-color: #dfe6e9;
+  height: calc(100vh - 125px);
+  padding: 20px;
 }

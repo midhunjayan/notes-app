@@ -13,7 +13,7 @@ export class NotesComponent implements OnInit {
     router.events.subscribe((val) => {
       // see also
       if (val instanceof NavigationEnd) {
-        this.isAddScreen = val.url === '/notes/new' ? true : false;
+        this.isAddScreen = val.url.includes('/notes/new') ? true : false;
       }
     });
   }
